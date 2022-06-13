@@ -1,0 +1,516 @@
+{
+	"info": {
+		"_postman_id": "9b454cac-770b-42aa-94da-22b77154f995",
+		"name": "noticias",
+		"description": "API de noticias colaborativas con gestión de usuarios.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:4000/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4000/",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						""
+					]
+				},
+				"description": "Inicio, muestra las noticias ordenadas por fecha."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4000/noticiastema",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4000/noticiastema/:tema",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"noticiastema",
+						":tema"
+					],
+					"variable": [
+						{
+							"key": "tema",
+							"value": "Cultura",
+							"description": "Tema a buscar"
+						}
+					]
+				},
+				"description": "Consulta noticias por tema."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4000/noticiasdeldia",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4000/noticiasdeldia",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"noticiasdeldia"
+					]
+				},
+				"description": "Noticias del día."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4000/noticiasfecha/:fecha",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4000/noticiasfecha/:fecha",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"noticiasfecha",
+						":fecha"
+					],
+					"variable": [
+						{
+							"key": "fecha",
+							"value": "2022-05-03",
+							"description": "Fecha a buscar"
+						}
+					]
+				},
+				"description": "Consulta noticias por fecha."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4000/registro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "pepe",
+							"description": "Nombre de usuario",
+							"type": "text"
+						},
+						{
+							"key": "pass",
+							"value": "pppp",
+							"description": "Contraseña",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "pepe@mail.com",
+							"description": "Dirección de correo electrónico",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:4000/registro",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"registro"
+					]
+				},
+				"description": "Registra usuario."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4000/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "pepe",
+							"description": "Nombre de usuario",
+							"type": "text"
+						},
+						{
+							"key": "pass",
+							"value": "pppp",
+							"description": "Contraseña",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:4000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"login"
+					]
+				},
+				"description": "Loguea usuario."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4000/noticianueva1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjUxNTcyMDg4LCJleHAiOjE2NTQxNjQwODh9.x1Pb8JMSmq5JKgcSxklXaiBvfAQuMRLAD8U9SgRqDnM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "titulo",
+							"value": "Los Brincos publican nuevo album desde el más allá",
+							"description": "Titulo de la noticia",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"value": "",
+							"description": "Foto de la noticia",
+							"type": "text"
+						},
+						{
+							"key": "entradilla",
+							"value": "Vuelven Los Brincos",
+							"description": "Entradilla",
+							"type": "text"
+						},
+						{
+							"key": "texto",
+							"value": "Relatan que fue difícil encontrar brillo en los sonidos del inframundo",
+							"description": "Cuerpo de la noticia",
+							"type": "text"
+						},
+						{
+							"key": "tema",
+							"value": "Cultura",
+							"description": "Tema de la noticia",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:4000/noticianueva",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"noticianueva"
+					]
+				},
+				"description": "Añade noticia sobre Cultura."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4000/noticianueva2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjUxNTcyMDg4LCJleHAiOjE2NTQxNjQwODh9.x1Pb8JMSmq5JKgcSxklXaiBvfAQuMRLAD8U9SgRqDnM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "titulo",
+							"value": "La guerra estalla",
+							"description": "Titulo de la noticia",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"value": "bomba.jpg",
+							"description": "Foto de la noticia",
+							"type": "text"
+						},
+						{
+							"key": "entradilla",
+							"value": "Cuidado aviso!",
+							"description": "Entradilla",
+							"type": "text"
+						},
+						{
+							"key": "texto",
+							"value": "Hay que tener cuidado al manipular guerra porque estalla",
+							"description": "Cuerpo de la noticia",
+							"type": "text"
+						},
+						{
+							"key": "tema",
+							"value": "Internacional",
+							"description": "Tema de la noticia",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:4000/noticianueva",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"noticianueva"
+					]
+				},
+				"description": "Añade noticia sobre Cultura."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4000/editarnoticia",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjUxNTcyMDg4LCJleHAiOjE2NTQxNjQwODh9.x1Pb8JMSmq5JKgcSxklXaiBvfAQuMRLAD8U9SgRqDnM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "1",
+							"description": "Id noticia",
+							"type": "text"
+						},
+						{
+							"key": "titulo",
+							"value": "Regreso del más allá",
+							"description": "Nuevo titulo",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"value": "",
+							"description": "Nueva foto",
+							"type": "text"
+						},
+						{
+							"key": "entradilla",
+							"value": "Otro sorbito de champagne",
+							"description": "Nueva entradilla",
+							"type": "text"
+						},
+						{
+							"key": "texto",
+							"value": "",
+							"description": "Nuevo texto",
+							"type": "text"
+						},
+						{
+							"key": "tema",
+							"value": "",
+							"description": "Nuevo tema",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:4000/editarnoticia",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"editarnoticia"
+					]
+				},
+				"description": "Edición de noticias, si los parámetros están vacíos, recupera los valores anteriores."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4000/borrarnoticia",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjUxNTcyMDg4LCJleHAiOjE2NTQxNjQwODh9.x1Pb8JMSmq5JKgcSxklXaiBvfAQuMRLAD8U9SgRqDnM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "2",
+							"description": "Id de noticia",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:4000/borrarnoticia",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"borrarnoticia"
+					]
+				},
+				"description": "Borra noticia según id."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4000/votarnoticia",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjUxNTcyMDg4LCJleHAiOjE2NTQxNjQwODh9.x1Pb8JMSmq5JKgcSxklXaiBvfAQuMRLAD8U9SgRqDnM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "1",
+							"description": "ID de noticia",
+							"type": "text"
+						},
+						{
+							"key": "pos",
+							"value": "1",
+							"description": "Voto positivo",
+							"type": "text"
+						},
+						{
+							"key": "neg",
+							"value": "0",
+							"description": "Voto negativo",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:4000/votarnoticia",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"votarnoticia"
+					]
+				},
+				"description": "Vota noticia con voto positivo o negativo, si el campo va en blanco recoge 0."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4000/editarusuario",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjUxNTcyMDg4LCJleHAiOjE2NTQxNjQwODh9.x1Pb8JMSmq5JKgcSxklXaiBvfAQuMRLAD8U9SgRqDnM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "1",
+							"description": "Id usuario",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "",
+							"description": "Nombre usuario",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "",
+							"description": "Dirección de correo electrónico",
+							"type": "text"
+						},
+						{
+							"key": "bio",
+							"value": "Hola, soy Pepe",
+							"description": "Biografía",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"value": "pepe.jpg",
+							"description": "Foto de perfil",
+							"type": "text"
+						},
+						{
+							"key": "pass",
+							"value": "pepe",
+							"description": "Contraseña",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:4000/editarusuario",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"editarusuario"
+					]
+				},
+				"description": "Edita usuario, requiere saber su id."
+			},
+			"response": []
+		}
+	]
+}
